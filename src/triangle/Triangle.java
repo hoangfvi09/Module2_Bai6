@@ -49,6 +49,10 @@ public class Triangle extends Shape{
     public float getHalfOfPerimeter(){
         return (sideNo1+sideNo2+sideNo3)/2;
     }
+    public float getPerimeter(){
+        return sideNo1+sideNo2+sideNo3;
+    }
+
 
     public double getArea(){
         return Math.pow(getHalfOfPerimeter()*(getHalfOfPerimeter()-sideNo1)*(getHalfOfPerimeter()-sideNo2)*(getHalfOfPerimeter()-sideNo3),0.5);
@@ -61,6 +65,8 @@ public class Triangle extends Shape{
                 ", sideNo2=" + sideNo2 +
                 ", sideNo3=" + sideNo3 +
                 ",color= "+super.getColor()+
+                ",area= "+getArea()+
+                ",perimeter= "+getPerimeter()+
                 '}';
     }
 
